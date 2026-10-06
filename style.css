@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header, .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.main-container {
+    display: flex;
+    flex: 1;
+}
+
+.content {
+    flex: 3;
+    padding: 20px;
+    background-color: #ffffff;
+    font-size: 18px;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 20px;
+    font-size: 18px;
+    border-left: 1px solid #ddd;
+}
+
+/* Bước 3: Responsive với Media Queries */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        border-left: none;
+        border-top: 1px solid #ddd;
+    }
+}
